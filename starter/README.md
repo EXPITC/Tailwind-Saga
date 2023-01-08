@@ -39,3 +39,6 @@ Add the `@tailwind` directives for each of Tailwind’s layers to your  `globals
 >```
 
 *you ready to go...*
+you can copy this starter by
+
+    > npx create-next-app@latest starter --use-npm --example "https://github.com/EXPITC/Tailwind-Saga/tree/main/starter"
