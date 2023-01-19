@@ -1,6 +1,6 @@
 import dynamic, { LoaderComponent } from 'next/dynamic'
 import Head from 'next/head'
-import { ComponentType, useEffect, useState } from 'react'
+import { useState } from 'react'
 import styles from '../styles/Home.module.css'
 import MiniProfiCard from '../components/mini-profile-card'
 import LeftNav, { CLOSELEFTNAV, typeConditionLeftNav, OPENLEFTNAV } from '../components/left-navbar'

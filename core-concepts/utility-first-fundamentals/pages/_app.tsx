@@ -1,39 +1,8 @@
 // import '../styles/globals.css'
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
-import { createContext, Dispatch, SetStateAction, useContext, useEffect, useState } from 'react'
+import { createContext, useContext, useState } from 'react'
 
-// type initLefNav = boolean
-// type initNotif = [{
-//   user: string,
-//   preMessage: string
-// }] | []
-//
-// const initLefNav: initLefNav = false
-// const initNotif: initNotif = []
-//
-// const initValue = {
-//   initLefNav,
-//   initNotif,
-//   isLeftNav: initLefNav,
-//   setLeftNav: () => { },
-//   isNotif: initNotif,
-//   setNotif: () => { }
-// }
-//
-// type initValue = {
-//   initLefNav: initLefNav,
-//   setLeftNav: Dispatch<SetStateAction<initLefNav>>,
-//   initNotif: initNotif,
-//   setNotif: Dispatch<SetStateAction<initNotif>>
-// }
-
-// interface componentItemContextType {
-//   isLeftNav: boolean,
-//   setLeftNav: Dispatch<SetStateAction<initLefNav>>,
-//   isNotif: initNotif,
-//   setNotif: Dispatch<SetStateAction<initNotif>>,
-// }
 
 const initValueComponentItem: initValueComponentItem = {
   leftNav: true,

@@ -1,6 +1,4 @@
-import { LoaderComponent } from "next/dynamic";
 import Image from "next/image";
-import { useEffect, useState } from "react";
 import { useComponentItemContext } from "../pages/_app";
 
 export default function Notif() {
