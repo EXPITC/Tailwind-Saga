@@ -10,8 +10,6 @@ export default function MiniProfileCard() {
   const setComponent = n!.setComponent
   const notif = isComponent!.notif
 
-  // console.log(notif)
-
   return (
     <div
       className="
@@ -43,8 +41,9 @@ export default function MiniProfileCard() {
               notif: [
                 ...notif,
                 {
-                  user: `hallo ${num}`,
-                  preMessage: `heelno ${num}`
+                  user: `#user ${num}`,
+                  preMessage: `heelno ${num}`,
+                  status: true
                 }
               ]
             })

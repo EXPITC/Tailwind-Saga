@@ -20,7 +20,6 @@ export default function Home() {
 
   const [isLeftNav, setLeftNav] = useState<typeConditionLeftNav>(CLOSELEFTNAV)
   const { isComponent } = useComponentItemContext()
-  // const [notif, setNotif] = useState<number[]>([])
 
   return (
     <>
@@ -45,7 +44,7 @@ export default function Home() {
             onClick={() => {
               setLeftNav(isLeftNav === OPENLEFTNAV ? CLOSELEFTNAV : OPENLEFTNAV)
             }}>Slide</button>
-          {isComponent!.notif.length > 0 && <ChatNotif />}
+          {isComponent!.notif.length > 0 && <ChatNotif key="notif" />}
         </main>
       </div>
     </>

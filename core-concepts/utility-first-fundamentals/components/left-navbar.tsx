@@ -1,4 +1,3 @@
-import { useComponentItemContext } from "../pages/_app"
 import MiniProfileCard from "./mini-profile-card"
 
 const OPENLEFTNAV = 'translate-x-0'

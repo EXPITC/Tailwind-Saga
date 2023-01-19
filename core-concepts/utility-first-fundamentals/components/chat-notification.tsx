@@ -7,16 +7,15 @@ export default function Notif() {
   const notif = isComponent!.notif
 
   return (
-    <>
-      {notif.map(({ user, preMessage }) => {
+    <div className='absolute -top-4 right-0 pr-4 mt-6 overflow-hidden flex flex-col-reverse justify-end  space-y-reverse space-y-5'>
+      {notif.map(({ user, preMessage, status }) => {
         return (<div
           key={user}
-          className="
-          absolute top-4 right-4
-          ease-in
+          className={`
+          transition ease-in-out duration-200 ${status ? 'translate-x-96' : 'translate-x-0'}  
           p-6 bg-white rounded-xl shadow-lg
           max-w-sm mx-auto  
-          flex items-center space-x-6">
+          flex items-center space-x-6`}>
           <div className="shrink-0">
             <Image
               className="h-20 w-20 rounded-t-full rounded-br-full rounded-bl-3xl"
@@ -25,13 +24,12 @@ export default function Notif() {
               alt="ChitChat Logo" />
           </div>
           <div>
-            {/* <div className="text-xl font-medium text-black">ChitChat</div> */}
             <div className="text-xl font-medium text-black">{user}</div>
-            <p className="text-slate-500">{preMessage}</p>
+            <p className="text-slate-500">{`message: ${preMessage}`}</p>
           </div>
         </div>)
       })
       }
-    </>
+    </div >
   )
 }
