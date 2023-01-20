@@ -5,9 +5,9 @@ import { useComponentItemContext } from "../pages/_app";
 export default function MiniProfileCard() {
 
   const [num, setNum] = useState<number>(0)
-  const n = useComponentItemContext()
-  const isComponent = n.isComponent
-  const setComponent = n!.setComponent
+  const c = useComponentItemContext()
+  const isComponent = c.isComponent
+  const setComponent = c!.setComponent
   const notif = isComponent!.notif
 
   return (

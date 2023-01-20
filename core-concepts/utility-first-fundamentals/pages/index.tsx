@@ -1,9 +1,8 @@
 import dynamic, { LoaderComponent } from 'next/dynamic'
 import Head from 'next/head'
-import { useState } from 'react'
 import styles from '../styles/Home.module.css'
 import MiniProfiCard from '../components/mini-profile-card'
-import LeftNav, { CLOSELEFTNAV, typeConditionLeftNav, OPENLEFTNAV } from '../components/left-navbar'
+import LeftNav from '../components/left-navbar'
 import { useComponentItemContext } from './_app'
 
 const ChatNotif = dynamic((): LoaderComponent => import('../components/chat-notification'),
@@ -11,14 +10,8 @@ const ChatNotif = dynamic((): LoaderComponent => import('../components/chat-noti
     ssr: false
   })
 
-// const LeftNav: ComponentType<{ condition: typeConditionLeftNav }> = dynamic(() => import('../components/left-navbar'), {
-//   ssr: false,
-// })
-
-
 export default function Home() {
 
-  const [isLeftNav, setLeftNav] = useState<typeConditionLeftNav>(CLOSELEFTNAV)
   const { isComponent } = useComponentItemContext()
 
   return (
@@ -30,7 +23,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="flex bg-gradient-to-r from-slate-700 to-black">
-        <LeftNav condition={isLeftNav} />
+        <LeftNav />
         <main className={styles.main + ' w-full'}>
           <h1 className="text-orange-500 text-3xl font-bold underline">
             Hotel Moscow
@@ -41,9 +34,7 @@ export default function Home() {
             rounded-lg px-5 py-2.5 text-center mr-2 mb-2
             bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-tl 
             focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 "
-            onClick={() => {
-              setLeftNav(isLeftNav === OPENLEFTNAV ? CLOSELEFTNAV : OPENLEFTNAV)
-            }}>Slide</button>
+          >Just A Button</button>
           {isComponent!.notif.length > 0 && <ChatNotif key="notif" />}
         </main>
       </div>

@@ -1,13 +1,51 @@
 import Image from "next/image";
+import { useEffect } from "react";
 import { useComponentItemContext } from "../pages/_app";
 
 export default function Notif() {
-
-  const { isComponent } = useComponentItemContext()
+  const { isComponent, setComponent } = useComponentItemContext()
   const notif = isComponent!.notif
+  useEffect(() => {
+    // Status component
+    const delTheLastNotif = {
+      ...isComponent!,
+      notif: [
+        ...notif.filter((_, index, arr) => index != (arr.length - 1))
+      ]
+    }
+    const chageNotifToEnteringStage = {
+      ...isComponent!,
+      notif: [
+        ...notif.map((c, i, arr) => {
+          if (i === (arr.length - 1)) {
+            return {
+              ...c,
+              status: false
+            }
+          }
+          return c
+        })
+      ]
+    }
+
+    const timerNotifRemove = setTimeout(() => {
+      setComponent?.(delTheLastNotif)
+      console.log("Notif remove")
+    }, 2000)
+    const timerNotifSlideIn = setTimeout(() => {
+      setComponent?.(chageNotifToEnteringStage)
+      console.log("Slide in")
+    }, 100)
+
+    return (() => {
+      // Clean
+      clearTimeout(timerNotifRemove)
+      clearTimeout(timerNotifSlideIn)
+    })
+  }, [notif.length])
 
   return (
-    <div className='absolute -top-4 right-0 pr-4 mt-6 overflow-hidden flex flex-col-reverse justify-end  space-y-reverse space-y-5'>
+    <div className='absolute -top-4 right-0 pr-3 pt-6 max-h-screen overflow-hidden flex flex-col-reverse justify-end space-y-reverse space-y-5 ease-in-out duration-300'>
       {notif.map(({ user, preMessage, status }) => {
         return (<div
           key={user}
