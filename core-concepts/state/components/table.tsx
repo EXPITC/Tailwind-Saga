@@ -35,17 +35,17 @@ export default function Table() {
     <div className="bg-white rounded-md overflow-hidden">
       <table className="w-full h-full rounded-md text-left text-black" >
         <thead className="bg-slate-50 h-14 border-b border-slate-200 ">
-          <tr>
-            <th className="w-44 px-2" >Name</th>
-            <th className="w-44 px-2">Title</th>
-            <th className="w-44 px-2">Email</th>
+          <tr className="only:w-44">
+            <th className="px-2">Name</th>
+            <th className="px-2">Title</th>
+            <th>Email</th>
           </tr>
         </thead>
         <tbody className="">
           {
             dummy.map(({ name, title, email }) => {
               return (
-                <tr className="odd:bg-white even:bg-slate-50  ">
+                <tr className="odd:bg-white even:bg-slate-50">
                   <td className="px-2">{name}</td>
                   <td className="px-2">{title}</td>
                   <td className="px-2">{email}</td>
