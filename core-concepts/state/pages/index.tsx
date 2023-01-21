@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Button from '../components/button'
+import FormLogin from '../components/form-login'
 import Inbox from '../components/inbox'
 import Table from '../components/table'
 import styles from '../styles/Home.module.css'
@@ -18,6 +19,7 @@ export default function Home() {
           Hello world!
         </h1>
         <div className="w-auto flex space-x-3">
+          <FormLogin />
           <Inbox />
           <Table />
         </div>

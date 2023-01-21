@@ -45,7 +45,7 @@ export default function Table() {
           {
             dummy.map(({ name, title, email }) => {
               return (
-                <tr className="odd:bg-white even:bg-slate-50">
+                <tr key={email} className="odd:bg-white even:bg-slate-50">
                   <td className="px-2">{name}</td>
                   <td className="px-2">{title}</td>
                   <td className="px-2">{email}</td>

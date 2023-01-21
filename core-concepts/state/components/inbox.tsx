@@ -34,7 +34,7 @@ export default function Inbox() {
     <ul role="list" className="bg-white rounded-md p-6 divide-y divide-slate-200">
       {dummy.map(({ imageUrl, name, email }) => {
         return (
-          <li role="listitem" className="flex py-4 first:pt-0 last:pb-0">
+          <li key={email} role="listitem" className="flex py-4 first:pt-0 last:pb-0">
             <Image className="h-10 w-10 border border-slate-200 rounded-full" width={40} height={40} src={imageUrl} alt={name} />
             <div className="ml-3 overflow-hidden">
               <p className="text-sm font-medium text-slate-900">{name}</p>
