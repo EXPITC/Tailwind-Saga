@@ -10,7 +10,7 @@ export default function Peer() {
     <div className="flex flex-col m-auto space-y-4">
       <form className="bg-white p-4 mx-auto my-auto min-w-fit rounded-md">
         <label htmlFor="email" className="block">
-          <span className="block text-sm font-medium text-slate-700">Email</span>
+          <span className="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-slate-700">Email</span>
           <input value={value} onChange={(e) => setValue(e.target.value)} type="email" id="email" placeholder="Hotel@Moscow" className="
           peer 
           bg-white border border-slate-300 rounded-md p-2 mt-1 text-black text-sm placeholder-slate-400
@@ -27,7 +27,7 @@ export default function Peer() {
           <legend className="text-slate-700">Published status</legend>
         </div>
 
-        <input id="draft" className="peer/draft mr-2 mb-0.5 text-violet-500 border-slate-300 focus:ring-violet-500" type="radio" name="status" checked />
+        <input id="draft" className="peer/draft mr-2 mb-0.5 text-violet-500 border-slate-300 focus:ring-violet-500" type="radio" name="status" defaultChecked />
         <label htmlFor="draft" className="peer-checked/draft:text-violet-500">Draft</label>
 
         <input id="published" className="peer/published mr-2 mb-0.5 ml-4 text-violet-500 border-slate-300 focus:ring-violet-500" type="radio" name="status" />
