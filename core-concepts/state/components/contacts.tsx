@@ -32,7 +32,7 @@ export default function Contacts() {
         return (
           <li key={email} role='listitem' className="group/item hover:bg-slate-100 flex justify-between items-center p-4 min-w-max rounded-2xl ">
             <div className="flex space-x-4 items-center ">
-              <Image className="w-10 h-10 rounded-full" src={imageUrl} alt={name} height={40} width={40} />
+              <Image className="w-10 h-10 border border-slate-200 rounded-full" src={imageUrl} alt={name} height={40} width={40} />
               <div className="max-w-xs">
                 <a className="capitalize font-semibold">{name}</a>
                 <p className="text-slate-600 drop-shadow-md font-thin truncate">{title}</p>

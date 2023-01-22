@@ -6,6 +6,7 @@ import Inbox from '../components/inbox'
 import NewProjectButton from '../components/newProject-button'
 import Contacts from '../components/contacts'
 import Table from '../components/table'
+import Peer from '../components/peer'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
@@ -22,12 +23,13 @@ export default function Home() {
           Hello world!
           <SwipeLeft className="fill-white pl-1 text-2xl" />
         </h1>
-        <div className="w-full flex p-4 space-x-3 overflow-x-scroll rounded-md ">
+        <div className={`w-full flex p-4 space-x-3 overflow-x-scroll ${styles.scrollbarHide} rounded-md `}>
           <FormLogin />
           <Inbox />
           <Table />
           <NewProjectButton />
           <Contacts />
+          <Peer />
         </div>
         <Button value="Save changes" />
       </main>

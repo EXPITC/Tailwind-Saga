@@ -7,6 +7,14 @@
   min-height: 100vh;
 }
 
+.scrollbarHide::-webkit-scrollbar{
+  display: none;
+}
+
+.scrollbarHide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
 .description {
   display: inherit;
   justify-content: inherit;
