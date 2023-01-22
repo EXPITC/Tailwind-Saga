@@ -10,6 +10,7 @@ import Peer from '../components/peer'
 import styles from '../styles/Home.module.css'
 import BlockQuote from '../components/blockquote'
 import SearchBar from '../components/searchbar'
+import FileInputProfile from '../components/fileinputprofile'
 
 export default function Home() {
   return (
@@ -34,6 +35,7 @@ export default function Home() {
           <Peer />
           <BlockQuote />
           <SearchBar />
+          <FileInputProfile />
         </div>
         <Button value="Save changes" />
       </main>
