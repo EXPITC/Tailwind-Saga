@@ -43,11 +43,11 @@ export default function FormLogin() {
   }
   // Change button to right form
   return (
-    <form className="bg-white rounded-md w-72 p-4 space-y-4 my-auto">
+    <form className="bg-white rounded-md min-w-max p-4 space-y-4 my-auto">
       {
         inputList.map(({ type, disable }) => {
           return (
-            <label className="block" key={type}>
+            <label className="block w-60" key={type}>
               <span className="block text-sm font-medium capitalize text-slate-700">{type}</span>
               <input type={type} required={false} value={value[type as keyof value]} onChange={handlerChange} disabled={disable} className="mt-1 w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-black text-sm placeholder-slate-400
               focus:outline focus:border-sky-500 focus:ring-1 focus:ring-sky-500

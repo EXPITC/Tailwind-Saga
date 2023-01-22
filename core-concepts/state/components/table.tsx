@@ -32,7 +32,7 @@ const dummy = [
 export default function Table() {
 
   return (
-    <div className="bg-white rounded-md overflow-hidden">
+    <div className="bg-white min-w-max rounded-md overflow-hidden">
       <table className="w-full h-full rounded-md text-left text-black" >
         <thead className="bg-slate-50 h-14 border-b border-slate-200 ">
           <tr className="only:w-44">

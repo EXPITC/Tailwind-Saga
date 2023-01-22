@@ -1,7 +1,7 @@
 
 interface Button {
   value: string
-  type: 'button' | 'submit' | 'reset'
+  type?: 'button' | 'submit' | 'reset'
 }
 
 export default function Button({ value = "This Butt-on", type = "button" }: Button): JSX.Element {

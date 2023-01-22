@@ -31,7 +31,7 @@ const dummy = [
 export default function Inbox() {
 
   return (
-    <ul role="list" className="bg-white rounded-md p-6 divide-y divide-slate-200">
+    <ul role="list" className="bg-white min-w-max rounded-md p-6 divide-y divide-slate-200">
       {dummy.map(({ imageUrl, name, email }) => {
         return (
           <li key={email} role="listitem" className="flex py-4 first:pt-0 last:pb-0">
