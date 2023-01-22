@@ -11,6 +11,7 @@ import styles from '../styles/Home.module.css'
 import BlockQuote from '../components/blockquote'
 import SearchBar from '../components/searchbar'
 import FileInputProfile from '../components/fileinputprofile'
+import ListMarker from '../components/listmarker'
 
 export default function Home() {
   return (
@@ -36,6 +37,7 @@ export default function Home() {
           <BlockQuote />
           <SearchBar />
           <FileInputProfile />
+          <ListMarker />
         </div>
         <Button value="Save changes" />
       </main>
