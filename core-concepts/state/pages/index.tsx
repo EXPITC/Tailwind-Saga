@@ -13,6 +13,7 @@ import SearchBar from '../components/searchbar'
 import FileInputProfile from '../components/fileinputprofile'
 import ListMarker from '../components/listmarker'
 import HighlightText from '../components/highlightedtext'
+import Letter from '../components/letter'
 
 export default function Home() {
   return (
@@ -40,6 +41,7 @@ export default function Home() {
           <FileInputProfile />
           <ListMarker />
           <HighlightText />
+          <Letter />
         </div>
         <Button value="Save changes" />
       </main>
