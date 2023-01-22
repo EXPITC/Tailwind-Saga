@@ -9,6 +9,7 @@ import Table from '../components/table'
 import Peer from '../components/peer'
 import styles from '../styles/Home.module.css'
 import BlockQuote from '../components/blockquote'
+import SearchBar from '../components/searchbar'
 
 export default function Home() {
   return (
@@ -32,6 +33,7 @@ export default function Home() {
           <Contacts />
           <Peer />
           <BlockQuote />
+          <SearchBar />
         </div>
         <Button value="Save changes" />
       </main>
