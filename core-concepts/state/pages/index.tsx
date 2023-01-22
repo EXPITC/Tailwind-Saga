@@ -12,6 +12,7 @@ import BlockQuote from '../components/blockquote'
 import SearchBar from '../components/searchbar'
 import FileInputProfile from '../components/fileinputprofile'
 import ListMarker from '../components/listmarker'
+import HighlightText from '../components/highlightedtext'
 
 export default function Home() {
   return (
@@ -38,6 +39,7 @@ export default function Home() {
           <SearchBar />
           <FileInputProfile />
           <ListMarker />
+          <HighlightText />
         </div>
         <Button value="Save changes" />
       </main>
