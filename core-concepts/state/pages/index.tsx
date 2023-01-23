@@ -14,8 +14,13 @@ import FileInputProfile from '../components/fileinputprofile'
 import ListMarker from '../components/listmarker'
 import HighlightText from '../components/highlightedtext'
 import Letter from '../components/letter'
+import { useState } from 'react'
+import Dialog from '../components/dialog'
 
 export default function Home() {
+
+  const [isDialog, setDialog] = useState<boolean>(false)
+
   return (
     <>
       <Head>
@@ -24,6 +29,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Dialog open={isDialog} handler={() => setDialog(false)} />
       <main className="flex flex-col justify-between space-y-4 min-h-screen p-24 items-center">
         <h1 className="text-orange-500 text-3xl font-bold underline">
           Hello world!
@@ -43,7 +49,7 @@ export default function Home() {
           <HighlightText />
           <Letter />
         </div>
-        <Button value="Save changes" />
+        <Button value="Save changes" handler={() => setDialog(true)} />
       </main>
     </>
   )
