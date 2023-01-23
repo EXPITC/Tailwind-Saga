@@ -17,6 +17,7 @@ import Letter from '../components/letter'
 import { useState } from 'react'
 import Dialog from '../components/dialog'
 import Grid from '../components/grid'
+import ColorScheme from '../components/colorscheme'
 
 export default function Home() {
 
@@ -34,7 +35,7 @@ export default function Home() {
       <main className="flex flex-col justify-between space-y-4 min-h-screen p-24 items-center">
         <h1 className="text-orange-500 text-3xl font-bold underline">
           Hello world!
-          <SwipeLeft className="fill-white pl-1 text-2xl" />
+          <SwipeLeft className="fill-black dark:fill-white pl-1 text-2xl" />
         </h1>
         <div className={`w-full flex p-4 space-x-3 bg-grey-700 shadow-zinc-700 overflow-x-scroll ${styles.scrollbarHide} rounded-md `}>
           <FormLogin />
@@ -50,6 +51,7 @@ export default function Home() {
           <HighlightText />
           <Letter />
           <Grid />
+          <ColorScheme />
         </div>
         <Button value="Save changes" handler={() => setDialog(true)} />
       </main>
