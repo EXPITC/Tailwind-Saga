@@ -1,5 +1,3 @@
-import { SetStateAction } from "react"
-
 interface Button {
   value: string
   type?: 'button' | 'submit' | 'reset'

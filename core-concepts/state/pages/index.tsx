@@ -16,6 +16,7 @@ import HighlightText from '../components/highlightedtext'
 import Letter from '../components/letter'
 import { useState } from 'react'
 import Dialog from '../components/dialog'
+import Grid from '../components/grid'
 
 export default function Home() {
 
@@ -48,6 +49,7 @@ export default function Home() {
           <ListMarker />
           <HighlightText />
           <Letter />
+          <Grid />
         </div>
         <Button value="Save changes" handler={() => setDialog(true)} />
       </main>
