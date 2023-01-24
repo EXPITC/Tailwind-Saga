@@ -18,6 +18,7 @@ import { useState } from 'react'
 import Dialog from '../components/dialog'
 import Grid from '../components/grid'
 import ColorScheme from '../components/colorscheme'
+import ProcessingButton from '../components/processingbutton'
 
 export default function Home() {
 
@@ -52,6 +53,7 @@ export default function Home() {
           <Letter />
           <Grid />
           <ColorScheme />
+          <ProcessingButton />
         </div>
         <Button value="Save changes" handler={() => setDialog(true)} />
       </main>

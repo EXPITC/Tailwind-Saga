@@ -9,7 +9,7 @@ export default function Grid() {
       {
         dummy.map((i) => {
           return (
-            <div className="bg-orange-200 m-2 h-12 w-12 
+            <div key={i} className="bg-orange-200 m-2 h-12 w-12 
                 rounded-md
                 flex justify-center items-center 
               " >
