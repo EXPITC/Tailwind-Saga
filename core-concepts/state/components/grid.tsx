@@ -5,7 +5,7 @@ const dummy = [0, 1, 2, 3, 4, 5]
 export default function Grid() {
 
   return (
-    <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 bg-white min-w-fit  m-auto rounded-md p-4">
+    <div className="supports-[display:grid]:grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 bg-white min-w-fit  m-auto rounded-md p-4">
       {
         dummy.map((i) => {
           return (
