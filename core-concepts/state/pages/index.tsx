@@ -22,6 +22,7 @@ import ProcessingButton from '../components/processingbutton'
 import SocialSecurityNumberInput from '../components/socialsecuritynumber-input'
 import ViewPortComponent from '../components/viewportcomponent'
 import RtlProfile from '../components/rtlprofile'
+import Summary from '../components/summary'
 
 export default function Home() {
 
@@ -60,6 +61,7 @@ export default function Home() {
           <SocialSecurityNumberInput />
           <ViewPortComponent />
           <RtlProfile />
+          <Summary />
         </div>
         <Button value="Save changes" handler={() => setDialog(true)} />
       </main>
