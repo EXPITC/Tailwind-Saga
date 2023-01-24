@@ -1,28 +1,40 @@
 import { SwipeLeft } from '@mui/icons-material'
 import Head from 'next/head'
+import dynamic from 'next/dynamic'
+import styles from '../styles/Home.module.css'
+import { useState } from 'react'
+
+// First component render
 import Button from '../components/button'
 import FormLogin from '../components/form-login'
 import Inbox from '../components/inbox'
-import NewProjectButton from '../components/newProject-button'
-import Contacts from '../components/contacts'
 import Table from '../components/table'
-import Peer from '../components/peer'
-import styles from '../styles/Home.module.css'
-import BlockQuote from '../components/blockquote'
-import SearchBar from '../components/searchbar'
-import FileInputProfile from '../components/fileinputprofile'
-import ListMarker from '../components/listmarker'
-import HighlightText from '../components/highlightedtext'
-import Letter from '../components/letter'
-import { useState } from 'react'
 import Dialog from '../components/dialog'
-import Grid from '../components/grid'
-import ColorScheme from '../components/colorscheme'
-import ProcessingButton from '../components/processingbutton'
-import SocialSecurityNumberInput from '../components/socialsecuritynumber-input'
-import ViewPortComponent from '../components/viewportcomponent'
-import RtlProfile from '../components/rtlprofile'
-import Summary from '../components/summary'
+
+// Out frame or rendered components
+const opt: { ssr: boolean } = {
+  ssr: false
+}
+function get(components: string) {
+  return import(`../components/${components}`)
+}
+const NewProjectButton = dynamic(get('newProject-button'), { ...opt })
+const Contacts = dynamic(get('contacts'), { ...opt })
+const Peer = dynamic(get('peer'), { ...opt })
+const BlockQuote = dynamic(get('blockquote'), { ...opt })
+const SearchBar = dynamic(get('searchbar'), { ...opt })
+const FileInputProfile = dynamic(get('fileinputprofile'), { ...opt })
+const ListMarker = dynamic(get('listmarker'), { ...opt })
+const HighlightText = dynamic(get('highlightedtext'), { ...opt })
+const Letter = dynamic(get('letter'), { ...opt })
+const Grid = dynamic(get('grid'), { ...opt })
+const ColorScheme = dynamic(get('colorscheme'), { ...opt })
+const ProcessingButton = dynamic(get('processingbutton'), { ...opt })
+const SocialSecurityNumberInput = dynamic(get('socialsecuritynumber-input'), { ...opt })
+const ViewPortComponent = dynamic(get('viewportcomponent'), { ...opt })
+const RtlProfile = dynamic(get('rtlprofile'), { ...opt })
+const Summary = dynamic(get('summary'), { ...opt })
+
 
 export default function Home() {
 

@@ -21,7 +21,7 @@ export default function RtlProfile() {
       {
         dummy.map(({ imageUrl, name, title, rtl }) => {
           return (
-            <div dir={rtl ? "rtl" : "ltr"} >
+            <div dir={rtl ? "rtl" : "ltr"} key={name}>
               <p className="mb-4 text-sm font-medium text-slate-500">{rtl ? 'Right-to-left' : 'Left-to-right'}</p>
               <div className="group flex items-center">
                 <Image className="
