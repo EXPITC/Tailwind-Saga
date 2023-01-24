@@ -20,6 +20,7 @@ import Grid from '../components/grid'
 import ColorScheme from '../components/colorscheme'
 import ProcessingButton from '../components/processingbutton'
 import SocialSecurityNumberInput from '../components/socialsecuritynumber-input'
+import ViewPortComponent from '../components/viewportcomponent'
 
 export default function Home() {
 
@@ -56,6 +57,7 @@ export default function Home() {
           <ColorScheme />
           <ProcessingButton />
           <SocialSecurityNumberInput />
+          <ViewPortComponent />
         </div>
         <Button value="Save changes" handler={() => setDialog(true)} />
       </main>

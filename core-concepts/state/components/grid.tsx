@@ -9,11 +9,11 @@ export default function Grid() {
       {
         dummy.map((i) => {
           return (
-            <div key={i} className="bg-orange-200 m-2 h-12 w-12 
+            <div key={i} className="bg-violet-400 shadow-lg m-2 h-12 w-12 
                 rounded-md
                 flex justify-center items-center 
               " >
-              <span>{i}</span>
+              <span className="text-gray-100">{i}</span>
             </div>
           )
         })
