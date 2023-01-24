@@ -27,7 +27,7 @@ const dummy = [
 export default function Contacts() {
 
   return (
-    <ul role='list' className="bg-white min-w-fit rounded-md p-3 my-auto max-w-xs" >
+    <ul role='list' className="contact-Card-Container" >
       {dummy.map(({ imageUrl, name, title, email, phone }) => {
         return (
           <li key={email} role='listitem' className="group/item hover:bg-slate-100 flex justify-between items-center p-4 min-w-max rounded-2xl ">
@@ -46,7 +46,7 @@ export default function Contacts() {
         )
       }
       )}
-      <div className="group is-published">
+      <div className="group is-published border-t border-t-slate-200 pt-1">
         <div className="hidden group-[.is-published]:block">
           Published
         </div>

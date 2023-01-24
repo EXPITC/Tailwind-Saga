@@ -9,6 +9,19 @@
     margin: 0;
   }
 }
+
+@layer utilities {
+  .contact-Card-Container {
+    background-color: white;
+    min-width: 28rem;
+    overflow-x: hidden;
+    border-radius: 0.375rem;
+    padding: 0.75rem;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+}
+
 :root {
   --max-width: 1100px;
   --border-radius: 12px;
