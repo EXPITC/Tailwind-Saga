@@ -17,7 +17,7 @@ const dummy = [
 export default function RtlProfile() {
 
   return (
-    <div className="bg-slate-900 shadow-lg p-6 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-10 rounded-md min-w-max m-auto">
+    <div className="bg-white dark:bg-slate-900 shadow-lg p-6 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-10 rounded-md min-w-max m-auto">
       {
         dummy.map(({ imageUrl, name, title, rtl }) => {
           return (
@@ -29,8 +29,8 @@ export default function RtlProfile() {
                 "
                   src={imageUrl} width={24} height={24} alt={name} />
                 <div className="ltr:ml-3 rtl:mr-3">
-                  <p className="text-sm font-medium text-slate-300 group-hover:text-white">{name}</p>
-                  <p className="text-sm font-medium text-slate-500 group-hover:text-slate-300">{title}</p>
+                  <p className="text-sm font-medium text-slate-500 dark:text-slate-300 group-hover:text-slate-800 dark:group-hover:text-white">{name}</p>
+                  <p className="text-sm font-medium text-slate-400 dark:text-slate-500 group-hover:text-slate-500 dark:group-hover:text-slate-300">{title}</p>
                 </div>
               </div>
             </div>
