@@ -1,4 +1,6 @@
 import Head from 'next/head'
+import DarkModeCard from '../components/darkmode-card'
+import Toggel, { antiFlickerDarkMode } from '../components/toggel'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
@@ -10,10 +12,24 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}>
-        <h1 className="text-orange-500 text-3xl font-bold underline">
-          Hello world!
-        </h1>
+      <script
+        dangerouslySetInnerHTML={{
+          __html: antiFlickerDarkMode
+        }}
+      />
+      <main className="bg-white dark:bg-black flex flex-col justify-between items-center p-24 min-h-screen">
+        <Toggel />
+        <DarkModeCard />
+        <div className="flex space-x-24 [&_p]:p-4">
+          <div>
+            <p>Light mode</p>
+            <DarkModeCard dark={false} />
+          </div>
+          <div>
+            <p className="text-right">Dark mode</p>
+            <DarkModeCard dark={true} />
+          </div>
+        </div>
       </main>
     </>
   )
