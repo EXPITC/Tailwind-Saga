@@ -1,6 +1,48 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .btn-primary {
+    @apply py-2 px-4 bg-violet-500 text-white font-normal rounded-lg shadow-md hover:bg-violet-700 focus:outline-none focus:ring-2 focus:ring-violet-400 focus:ring-opacity-75
+  }
+  .main {
+    @apply relative bg-white dark:bg-black flex flex-col lg:flex-row justify-evenly items-center p-24 min-h-screen
+  }
+  .hello-world {
+    @apply text-orange-500 text-3xl font-bold underline
+  }
+  .navbar-container {
+    @apply absolute top-4
+  }
+  .navbar {
+    @apply flex justify-center space-x-4 p-4 bg-slate-900 dark:bg-white w-fit mx-auto rounded-md
+  }
+  .contributor-container {
+    @apply bg-slate-900 dark:bg-white p-8 rounded-md w-96
+  }
+  .contributor-information{
+    @apply flex items-center space-x-2 text-base
+  }
+  .contributor-h4 {
+    @apply font-semibold text-slate-900
+  }
+  .contributor-span {
+    @apply rounded-full bg-slate-100 px-2 py-1 text-xs font-semibold text-slate-700
+  }
+  .contributor-image-container {
+    @apply mt-3 flex -space-x-2 overflow-hidden
+  }
+  .contributor-image {
+    @apply inline-block h-12 w-12 rounded-full ring-2 ring-white
+  }
+  .contributor-link-container {
+    @apply mt-3 text-sm font-medium
+  }
+  .contributor-link {
+    @apply text-blue-800
+  }
+}
 :root {
   --max-width: 1100px;
   --border-radius: 12px;
