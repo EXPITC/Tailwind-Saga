@@ -22,11 +22,11 @@ export default function Home() {
         <DarkModeCard />
         <div className="flex space-x-24 [&_p]:p-4">
           <div>
-            <p>Light mode</p>
+            <p className="text-slate-900 dark:text-white">Light mode</p>
             <DarkModeCard dark={false} />
           </div>
           <div>
-            <p className="text-right">Dark mode</p>
+            <p className="text-right text-slate-900 dark:text-white">Dark mode</p>
             <DarkModeCard dark={true} />
           </div>
         </div>
