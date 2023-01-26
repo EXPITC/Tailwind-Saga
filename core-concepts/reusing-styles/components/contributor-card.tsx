@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const dummy = [
   {
@@ -38,14 +39,13 @@ export default function ContributorCard() {
         <span className="rounded-full bg-slate-100 px-2 py-1 text-xs font-semibold text-slate-700">204</span>
       </div >
       <div className="mt-3 flex -space-x-2 overflow-hidden">
-        <Image className="inline-block h-12 w-12 rounded-full ring-2 ring-white" width={48} height={48} src={dummy[0].imageUrl} alt={dummy[0].name} />
-        <Image className="inline-block h-12 w-12 rounded-full ring-2 ring-white" width={48} height={48} src={dummy[1].imageUrl} alt={dummy[1].name} />
-        <Image className="inline-block h-12 w-12 rounded-full ring-2 ring-white" width={48} height={48} src={dummy[2].imageUrl} alt={dummy[2].name} />
-        <Image className="inline-block h-12 w-12 rounded-full ring-2 ring-white" width={48} height={48} src={dummy[3].imageUrl} alt={dummy[3].name} />
-        <Image className="inline-block h-12 w-12 rounded-full ring-2 ring-white" width={48} height={48} src={dummy[4].imageUrl} alt={dummy[4].name} />
+        {
+          dummy.map(({ imageUrl, name, email }) => <Image className="inline-block h-12 w-12 rounded-full ring-2 ring-white" width={48} height={48} src={imageUrl} alt={name} key={email} />
+          )
+        }
       </div>
       <div className="mt-3 text-sm font-medium">
-        <a href="#" className="text-blue-800">+ 198 others</a>
+        <Link href="#" className="text-blue-800">+ 198 others</Link>
       </div>
     </div >
   )
