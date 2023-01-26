@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import DarkModeCard from '../components/darkmode-card'
 import Toggel, { antiFlickerDarkMode } from '../components/toggel'
-import styles from '../styles/Home.module.css'
 
 export default function Home() {
   return (
