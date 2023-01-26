@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import ContributorCard from '../components/contributor-card'
-import styles from '../styles/Home.module.css'
+import { Nav } from '../components/nav'
 
 export default function Home() {
   return (
@@ -11,7 +11,8 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}>
+      <Nav />
+      <main className="bg-white dark:bg-black flex justify-evenly items-center p-24 min-h-screen">
         <h1 className="text-orange-500 text-3xl font-bold underline">
           Hello world!
         </h1>
