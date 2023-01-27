@@ -1,3 +1,8 @@
+/* The path you provide to the @config directive is relative to that CSS file,
+* and will take precedence over a path defined in your PostCSS configuration 
+* ar in the Tailwind CLI. */
+@config '../tailwind.config.js';
+
 /**
  * This injects Tailwind's base styles and any base styles registered by
  * plugins.
