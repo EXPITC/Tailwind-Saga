@@ -19,16 +19,16 @@ export default function Home() {
           text-gray-dark font-sans text-3xl font-bold underline">
           {' '}Hello world!
         </h1>
-        <h2 className="text-[lenght:22px] text-[color:#bada55] mt-[100px]">Resolve ambiguities</h2>
+        <h2 className="card rounded-lg text-[lenght:22px] text-[color:#bada55] mt-[250px]">Resolve ambiguities</h2>
         <div className="
           [mask-image:url('https://api.iconify.design/whh:skull.svg')] 
           [mask-repeat:no-repeat]
           [mask-size:contain]
-          absolute top-1
+          absolute mx-auto top-1
           bg-gradient-to-r from-orange to-pink hover:from-gray-dark
           h-80 w-80">
         </div>
-        <ul role='list' className="absolute bottom-40">
+        <ul role='list' >
           {
             dummy.map((i) => <li role='listitem' key={i} className="lg:[&:nth-child(3)]:hover:underline block list-none">{i}</li>)
           }

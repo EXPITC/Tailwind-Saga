@@ -18,6 +18,21 @@
     background-color: red;
     @apply w-screen justify-center items-center h-screen
   }
+  .card {
+    background-color: theme('colors.pink');
+    border-radius: theme('borderRadius.none');
+    padding: theme('spacing.6');
+    box-shadow: theme('boxShadow.xl');
+  }
+  .select2-dropdown {
+    @apply rounded-b-lg shadow-md;
+  }
+  .select2-search {
+    @apply border border-gray-300 rounded;
+  }
+  .select2-results__group {
+    @apply text-lg font-bold text-gray-900;
+  }
 }
 
 :root {
