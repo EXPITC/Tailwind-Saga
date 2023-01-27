@@ -1,4 +1,4 @@
-import { Brightness2, DarkMode, LightMode } from "@mui/icons-material";
+import { Brightness2, LightMode } from "@mui/icons-material";
 import { useEffect, useState } from "react";
 
 export const antiFlickerDarkMode = `(function(){
@@ -67,7 +67,7 @@ interface MoonSunType {
 function MoonSun({ dark }: MoonSunType) {
 
   if (typeof dark === 'string') return (<></>)
-  return dark ? <Brightness2 className="fill-slate-900" /> : <LightMode className="fill-white dark:fill-slate-900" />
+  return dark ? <Brightness2 className="!fill-slate-900" /> : <LightMode className="!fill-white" />
 }
 
 function MoonSunStyle(dark: boolean | undefined, type: 1 | 2) {
