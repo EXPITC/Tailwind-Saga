@@ -9,7 +9,7 @@ export default function BlockQuote() {
       <span className="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-violet-500 relative inline-block">
         <span className="relative text-white">annoyed</span>
       </span>
-      {' '}all the time,<br /> people think that you're busy.
+      {' '}all the time,<br /> people think that you&apos;re busy.
     </blockquote>
   )
 }
