@@ -26,7 +26,7 @@ export default function ProcessingButton() {
   }, [dot, disable, first])
   return (
     <button type="button" onClick={() => { setDisable(true), setFirst(true) }} className="bg-indigo-500 inline-flex text-center items-center group disabled:pointer-events-none px-6 py-1 rounded-md relative m-auto" disabled={disable} >
-      <AutoModeRounded className={`motion-reduce:hidden transition ease-in-out duration-1000 ${disable ? "animate-spin opacity-100 w-5 mr-1" : "m-0 p-0 w-0 opacity-0"} h-5`} viewBox="0 0 24 24" />
+      <AutoModeRounded className={`motion-reduce:hidden transition ease-in-out duration-1000 ${disable ? "animate-spin opacity-100 !w-5 mr-1" : "m-0 p-0 !w-0 opacity-0"} h-5`} viewBox="0 0 24 24" />
       <span className={`${disable ? 'w-24 text-left' : 'w-32 text-center'}  motion-safe:ease-in-out truncate duration-700 motion-safe:group-hover:translate-x-2`}>{
         disable ?
           "Processing" + dot : "Click to process"}</span>
