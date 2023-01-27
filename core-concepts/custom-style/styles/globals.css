@@ -35,6 +35,12 @@
   }
 }
 
+@layer utilities {
+  .content-auto {
+    content-visibility: auto;
+  }
+}
+
 :root {
   --max-width: 1100px;
   --border-radius: 12px;

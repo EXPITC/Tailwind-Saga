@@ -21,6 +21,7 @@ export default function Home() {
         </h1>
         <h2 className="card rounded-lg text-[lenght:22px] text-[color:#bada55] mt-[250px]">Resolve ambiguities</h2>
         <div className="
+          content-auto
           [mask-image:url('https://api.iconify.design/whh:skull.svg')] 
           [mask-repeat:no-repeat]
           [mask-size:contain]
