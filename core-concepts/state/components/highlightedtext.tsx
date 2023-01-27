@@ -7,7 +7,7 @@ export default function HighlightText() {
   return (
     <div className="selection:bg-fuchsia-300 selection:text-fuchsia-900 bg-slate-800 p-4 space-y-4 rounded-md m-auto min-w-fit">
       <span className="block text-white font-normal items-center">
-        <SwipeDown className="fill-white w-5 mr-1 -inset-1 m-auto" />
+        <SwipeDown className="!fill-white w-5 mr-1 -inset-1 m-auto" />
         Try selecting some of this text with your mouse.
       </span>
       <p className="text-slate-400 max-w-md text-left">
