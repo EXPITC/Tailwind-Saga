@@ -42,7 +42,7 @@ export default function Notif() {
       clearTimeout(timerNotifRemove)
       clearTimeout(timerNotifSlideIn)
     })
-  }, [notif.length])
+  }, [notif.length, isComponent, notif, setComponent])
 
   return (
     <div className='absolute -top-4 right-0 pr-3 pt-6 max-h-screen overflow-hidden flex flex-col-reverse justify-end space-y-reverse space-y-5 ease-in-out duration-300'>
