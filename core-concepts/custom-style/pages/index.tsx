@@ -11,8 +11,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <h1 className="text-gray-light text-3xl font-bold underline">
-          Hello world!
+        <h1 className="absolute top-[117px] lg:top-[344px]
+          bg-[#bada55] text-[22px] before:content-['Festivus'] 
+          text-gray-dark font-sans text-3xl font-bold underline">
+          {' '}Hello world!
         </h1>
       </main>
     </>
