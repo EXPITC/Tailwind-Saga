@@ -39,7 +39,7 @@ export default function Toggel() {
       setDark(false)
       document.documentElement.classList.remove('dark')
     }
-  }, [dark])
+  }, [dark, os])
 
 
   return (
