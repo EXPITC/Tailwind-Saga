@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 
 const dummy = [
   {
@@ -29,8 +30,14 @@ const dummy = [
   }
 ]
 
+function ImageLoading() {
+  return <div className="contributor-image"></div>
+}
+
 
 export default function ContributorCard() {
+
+  const [isLoad, setLoad] = useState<boolean>(true)
 
   return (
     <div className="contributor-container">
@@ -40,7 +47,7 @@ export default function ContributorCard() {
       </div >
       <div className="contributor-image-container">
         {
-          dummy.map(({ imageUrl, name, email }) => <Image className="contributor-image" width={48} height={48} src={imageUrl} alt={name} key={email} />
+          dummy.map(({ imageUrl, name, email }) => <Image onLoadingComplete={() => setLoad(false)} className={`${isLoad ? 'animate-pulse' : ''} bg-slate-300 contributor-image`} width={48} height={48} src={imageUrl} alt={name} key={email} />
           )
         }
       </div>
