@@ -16,7 +16,7 @@ export default function Home() {
           __html: antiFlickerDarkMode
         }}
       />
-      <main className="bg-white dark:bg-black flex flex-col justify-between items-center p-24 min-h-screen">
+      <main className="bg-white dark:bg-black flex flex-col justify-evenly items-center p-24 min-h-screen">
         <Toggel />
         <DarkModeCard />
         <div className="flex space-x-24 [&_p]:p-4">

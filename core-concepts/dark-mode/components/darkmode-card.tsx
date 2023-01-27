@@ -12,7 +12,7 @@ export default function DarkModeCard({ dark = 'os' }: props) {
       <div className={`max-w-sm bg-white ${dark ? 'dark:bg-slate-800' : ""} rounded-lg px-6 py-8 ring-1 ring-slate-900/5 shadow-xl`}>
         <div>
           <span className="inline-flex items-center justify-center p-2 bg-indigo-500 rounded-md shadow-lg">
-            <RateReviewRounded className="fill-white h-6 w-6" viewBox="0 0 24 24" />
+            <RateReviewRounded className="!fill-white !h-6 !w-6" viewBox="0 0 24 24" />
           </span>
         </div>
         <h3 className={`

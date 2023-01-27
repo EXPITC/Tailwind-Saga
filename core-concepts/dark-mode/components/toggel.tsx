@@ -16,7 +16,6 @@ export default function Toggel() {
 
   useEffect(() => {
 
-    console.log(os)
     // Initiate first mode
     if (os === undefined) {
       localStorage.removeItem('theme')
@@ -30,7 +29,6 @@ export default function Toggel() {
     } else {
       localStorage.theme = 'light'
     }
-    console.log(window.matchMedia('(prefers-color-scheme: dark)'))
     // Adjust mode by initiated state
     if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
       setDark(true)
@@ -67,7 +65,7 @@ interface MoonSunType {
 function MoonSun({ dark }: MoonSunType) {
 
   if (typeof dark === 'string') return (<></>)
-  return dark ? <Brightness2 className="!fill-slate-900" /> : <LightMode className="!fill-white" />
+  return dark ? <Brightness2 className="!fill-white dark:!fill-slate-900" /> : <LightMode className="!fill-white dark:!fill-slate-900" />
 }
 
 function MoonSunStyle(dark: boolean | undefined, type: 1 | 2) {
