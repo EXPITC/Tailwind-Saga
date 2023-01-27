@@ -1,5 +1,6 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+
+const dummy = ["Try to hover me", "Try to hover me", "Try to hover me", "Try to hover me"]
 
 export default function Home() {
   return (
@@ -20,9 +21,14 @@ export default function Home() {
           [mask-image:url('https://api.iconify.design/whh:skull.svg')] 
           [mask-repeat:no-repeat]
           [mask-size:contain]
-          bg-gradient-to-r from-orange to-pink
+          bg-gradient-to-r from-orange to-pink hover:from-gray-dark
           h-80 w-80">
         </div>
+        <ul role='list' className="absolute bottom-40">
+          {
+            dummy.map((i) => <li role='listitem' key={i} className="lg:[&:nth-child(3)]:hover:underline block list-none">{i}</li>)
+          }
+        </ul>
       </main>
     </>
   )
