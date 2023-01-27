@@ -49,6 +49,56 @@
   }
 }
 
+.select2-dropdown {
+  @apply rounded-b-lg shadow-md;
+}
+.select2-search {
+  @apply border border-gray-300 rounded;
+}
+.select2-results_group {
+  @apply text-lg font-bold text-gray-900;
+}
+
+/* Input */
+.foo {
+ color: blue !important;
+}
+.bar {
+  @apply foo;
+}
+
+/* Output */
+.foo {
+  color: blue !important;
+}
+.bar {
+  /* Any rules inlined with `@apply` will have `!important` removed by default to avoid
+  specificity issues. */
+  color: blue;
+}
+
+/* If you'd like to `@apply`an existing class and make it `!important`, simply add `!important` to 
+the end of the declaration. */
+
+/* Input */
+.btn {
+  @apply font-bold py-2 px-4 rounded !important;
+}
+/* Output */
+.btn {
+  font-weight: 700 !important;
+  padding-top: .5rem !important;
+  padding-bottom: .5rem !important;
+  padding-right: 1rem !important;
+  padding-left: 1rem !important;
+  border-radius: .25rem !important;
+}
+/* Note that if you're using sass/SCSS, you'll need to use Sass' interpolation feature to get
+this to work. */
+/* .btn { */
+/*   @apply font-bold py-2 px-4 rounded #{!important}; */
+/* } */
+
 :root {
   --max-width: 1100px;
   --border-radius: 12px;
