@@ -11,16 +11,18 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="w-screen h-screen bg-pink flex justify-center">
+      <main className="w-screen h-screen bg-pink border flex flex-col justify-center items-center">
         <h1 className="absolute top-[117px] lg:top-[344px]
-          bg-[#bada55] text-[22px] before:content-['Festivus'] 
+          bg-[#bada55] text-[22px] before:content-['Festivus'] border 
           text-gray-dark font-sans text-3xl font-bold underline">
           {' '}Hello world!
         </h1>
+        <h2 className="text-[lenght:22px] text-[color:#bada55] mt-[100px]">Resolve ambiguities</h2>
         <div className="
           [mask-image:url('https://api.iconify.design/whh:skull.svg')] 
           [mask-repeat:no-repeat]
           [mask-size:contain]
+          absolute top-1
           bg-gradient-to-r from-orange to-pink hover:from-gray-dark
           h-80 w-80">
         </div>
