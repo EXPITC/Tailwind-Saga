@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import style from '../styles/Home.module.css'
 
 const dummy = ["Try to hover me", "Try to hover me", "Try to hover me", "Try to hover me"]
 
@@ -11,7 +12,8 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="w-screen h-screen bg-pink border flex flex-col justify-center items-center">
+      <main className='main-container'>
+        {/* <main className={`${style.flexCol} w-screen h-screen bg-pink justify-center items-center`}> */}
         <h1 className="absolute top-[117px] lg:top-[344px]
           bg-[#bada55] text-[22px] before:content-['Festivus'] border 
           text-gray-dark font-sans text-3xl font-bold underline">
