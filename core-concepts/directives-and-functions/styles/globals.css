@@ -35,6 +35,12 @@
 }
 
 @layer components {
+  .card {
+    background-color: theme('colors.white');
+    border-radius: theme('borderRadius.lg');
+    padding: theme('spacing.6');
+    box-shadow: theme('boxShadow.xl');
+  } 
   .btn-blue {
     @apply bg-fuchsia-500 hover:bg-fuchsia-700 text-white font-bold py-2 px-4 rounded 
   }
