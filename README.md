@@ -123,7 +123,7 @@ This project/repo dedicate to learn and follow the standardization based on stan
 <sub>This is actually some of them more technical and can only be clearer by looking at the code, comment, & commit but here's some a quick preview.</sub>
 
 > States Handling
-![state](blob/state.mp4)
+![state](blob/state.gif)
 
 > Dark mode
 ![dark-mode](blob/dark-mode.gif)
